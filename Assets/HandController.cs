@@ -28,7 +28,20 @@ public class HandController : MonoBehaviour {
             15f * Time.deltaTime
         );
 
-        Debug.Log(leftHand.transform.localPosition);
+
+        rightHand.localPosition = Vector3.Lerp(
+            rightHand.localPosition,
+            (rightHandPivot.localPosition.x / 6f) * Vector3.right + (rightHandPivot.localPosition.y / 6f) * Vector3.up + (rightHandPivot.localPosition.z / 3f) * Vector3.forward + /* - 4f * Vector3.forward*/ -0.2f * Vector3.up - 1.2f * Vector3.forward,
+            15f * Time.deltaTime
+        );
+
+        rightHand.localRotation = Quaternion.Lerp(
+            rightHand.localRotation,
+            rightHandPivot.localRotation,
+            15f * Time.deltaTime
+        );
+
+        //Debug.Log(leftHand.transform.localPosition);
     }
 
 }

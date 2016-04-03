@@ -143,9 +143,9 @@ public class xzimgMarkerUnityPluginPlane : MonoBehaviour
 	
     IEnumerator Start () 
 	{
-		Camera.main.clearFlags = CameraClearFlags.Skybox;
-		Camera.main.transform.position = new Vector3(0, 0, 0);
-		Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);
+		//Camera.main.clearFlags = CameraClearFlags.Skybox;
+		//Camera.main.transform.position = new Vector3(0, 0, 0);
+		//Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);
 		transform.position = new Vector3(0, 0, 0);
 		
 		yield return Application.RequestUserAuthorization (UserAuthorization.WebCam | UserAuthorization.Microphone);
