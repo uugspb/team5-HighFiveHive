@@ -308,8 +308,10 @@ public class xzimgMarkerUnityPluginPlane : MonoBehaviour
 							quat.z = -quat.z;
 							position.x = -position.x;
 						}*/
-	                    leftHandPivot.transform.localPosition = 0.1f * position;
+	                    leftHandPivot.transform.localPosition = /*0.1f **/ position;
 						leftHandPivot.transform.localRotation = quat;
+
+                        
 
                         leftHandPivot.transform.SetParent(worldHandContainer, true);
                     }
@@ -328,7 +330,7 @@ public class xzimgMarkerUnityPluginPlane : MonoBehaviour
 							quat.z = -quat.z;
 							position.x = -position.x;
 						}*/
-                        rightHandPivot.transform.localPosition = 0.1f * position;
+                        rightHandPivot.transform.localPosition = /*0.1f * */position;
                         rightHandPivot.transform.localRotation = quat;
 
                         rightHandPivot.transform.SetParent(worldHandContainer, true);
